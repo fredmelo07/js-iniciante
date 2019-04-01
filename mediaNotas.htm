@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Média Aritmética</title>
+		<meta charset="utf-8">
+		 <meta name="author" content="@fred_melo_07">
+		<style type="text/css">
+			body{margin-left: 10%; margin-right: 10%; margin-top: 50px;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="nota1">Nota #1:</label>
+			<input type="text" name="nota1" id="nota1" placeholder="Nota #1..."><br><br>
+			
+			<label for="nota2">Nota #2:</label>
+			<input type="text" name="nota2" id="nota2" placeholder="Nota #2..."><br><br>
+			
+			<label for="nota3">Nota #3:</label>
+			<input type="text" name="nota3" id="nota3" placeholder="Nota #3..."><br><br>
+
+			<input type="submit" value="Analisar" onclick="mediaTresNotas(nota1.value, nota2.value, nota3.value)">
+		</form>
+	</body>
+	<script>
+		function mediaTresNotas(n1, n2, n3)
+		{
+			/* variável 'media' receberá a média entre as três notas inseridas. */
+			var media = (+n1 + +n2 + +n3) / 3;
+
+			/* imprime a média entre as notas. */
+			alert("A média foi " + +media.toPrecision(3) +".");/* .toPrecision(3) formata o número para 3 digitos. */
+
+			/* verifica se o aluno foi aprovado ou reprovado. */
+			if (media >= 5)
+			{
+				alert("Você foi aprovado!");
+			}
+			else
+			{
+				alert("Você doi reprovado...");
+			}
+		} /* fim do corpo do método 'mediaTresNotas'. */
+		
+	</script>
+</html>
